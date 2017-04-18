@@ -87,19 +87,31 @@
 
 
 
-<meta name="description" content="Java序列化概念java串行化技术可以使你将一个对象的状态写入一个Byte流里，并且可以从其他的地方把该Byte流里的数据读出来，重新构造一个相同的对象。这种机制允许你将对象通过网络进行传播，并可以随时把对象持久化到数据库、文件等系统里。java的串行化机制是RMI、EJB等技术的技术基础。用途：利用对象的串行化实现保存应用程序的当前工作态度，下次再启动的时候将自动地回复到上次的执行状态。
-序列">
+<meta name="description" content="接口（interface）接口的定义接口从本质上来说是一种特殊的抽象类。
+关键字：interface
+在接口中，所有的方法为公开的，抽象的方法：public abstract。
+在接口中，所有的属性都是公开的、静态的常量：public static final。
+接口与接口之间可以多继承，用extends，多个之间用逗号隔开。
+接口中没有构造方法，不能用“new 接口名”来实例化一个接口，但可以声">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java序列化">
-<meta property="og:url" content="http://yoursite.com/2016/11/25/005java序列化/index.html">
+<meta property="og:title" content="abstract修饰符">
+<meta property="og:url" content="http://yoursite.com/2016/12/04/010接口(interface)/index.html">
 <meta property="og:site_name" content="醉墨">
-<meta property="og:description" content="Java序列化概念java串行化技术可以使你将一个对象的状态写入一个Byte流里，并且可以从其他的地方把该Byte流里的数据读出来，重新构造一个相同的对象。这种机制允许你将对象通过网络进行传播，并可以随时把对象持久化到数据库、文件等系统里。java的串行化机制是RMI、EJB等技术的技术基础。用途：利用对象的串行化实现保存应用程序的当前工作态度，下次再启动的时候将自动地回复到上次的执行状态。
-序列">
-<meta property="og:updated_time" content="2017-04-17T06:27:29.387Z">
+<meta property="og:description" content="接口（interface）接口的定义接口从本质上来说是一种特殊的抽象类。
+关键字：interface
+在接口中，所有的方法为公开的，抽象的方法：public abstract。
+在接口中，所有的属性都是公开的、静态的常量：public static final。
+接口与接口之间可以多继承，用extends，多个之间用逗号隔开。
+接口中没有构造方法，不能用“new 接口名”来实例化一个接口，但可以声">
+<meta property="og:updated_time" content="2017-04-18T14:20:22.834Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java序列化">
-<meta name="twitter:description" content="Java序列化概念java串行化技术可以使你将一个对象的状态写入一个Byte流里，并且可以从其他的地方把该Byte流里的数据读出来，重新构造一个相同的对象。这种机制允许你将对象通过网络进行传播，并可以随时把对象持久化到数据库、文件等系统里。java的串行化机制是RMI、EJB等技术的技术基础。用途：利用对象的串行化实现保存应用程序的当前工作态度，下次再启动的时候将自动地回复到上次的执行状态。
-序列">
+<meta name="twitter:title" content="abstract修饰符">
+<meta name="twitter:description" content="接口（interface）接口的定义接口从本质上来说是一种特殊的抽象类。
+关键字：interface
+在接口中，所有的方法为公开的，抽象的方法：public abstract。
+在接口中，所有的属性都是公开的、静态的常量：public static final。
+接口与接口之间可以多继承，用extends，多个之间用逗号隔开。
+接口中没有构造方法，不能用“new 接口名”来实例化一个接口，但可以声">
 
 
 
@@ -127,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/25/005java序列化/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/04/010接口(interface)/"/>
 
 
 
 
 
-  <title> Java序列化 | 醉墨 </title>
+  <title> abstract修饰符 | 醉墨 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +264,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/25/005java序列化/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/04/010接口(interface)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小狮子">
@@ -273,7 +285,7 @@
             
             
               
-                Java序列化
+                abstract修饰符
               
             
           </h1>
@@ -288,8 +300,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-11-25T16:13:26+08:00">
-                2016-11-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-04T18:45:36+08:00">
+                2016-12-04
               </time>
             
 
@@ -324,16 +336,34 @@
       
 
       
-        <h2 id="Java序列化"><a href="#Java序列化" class="headerlink" title="Java序列化"></a>Java序列化</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>java串行化技术可以使你将一个对象的状态写入一个Byte流里，并且可以从其他的地方把该Byte流里的数据读出来，重新构造一个相同的对象。这种机制允许你将对象通过网络进行传播，并可以随时把对象持久化到数据库、文件等系统里。java的串行化机制是RMI、EJB等技术的技术基础。用途：利用对象的串行化实现保存应用程序的当前工作态度，下次再启动的时候将自动地回复到上次的执行状态。</p>
-<p>序列化就是一种用来处理对象流的机制，所谓对象流也就是将对象的内容进行流化。可以对流化后的对象进行读写操作，也可将流化的对象传输于网络之间。序列化是为了解决在对对象流进行读写操作时所引发的问题。<br><a id="more"></a></p>
-<p>序列化的实现：将需要被序列化的类实现Serializable接口，然后使用一个输出流（如：FileOutputStream）来构造一个ObjectOutputStream（对象流）对象，接着，使用ObjectOutputStream对象的writeObject(Object obj)方法就可以将参数为obj的对象写出（即保存其状态），要恢复的话则用输出流。</p>
-<h3 id="串行化的特点："><a href="#串行化的特点：" class="headerlink" title="串行化的特点："></a>串行化的特点：</h3><p>1.如果某个类能够被串行化，其子类也可以被串行化。如果该类有父类，则分两种情况来考虑，如果该父类已经实现了可串行化接口，则其父类的相应字段及属性的处理和该类相同；如果该类的父类没有实现可串行化接口，则该类的父类所有的字段属性将不会串行化。</p>
-<p>2.声明为static和transient类型的成员数据不能被串行化。因为static代表类的状态，transient代表对象的临时数据。</p>
-<p>3.相关的类和接口：在java.io包中提供的涉及对象的串行化的类与接口有ObjectOutput接口、ObjectOutputStream类、ObjectInput接口、ObjectInputStream类。</p>
-<p>A：<strong>ObjectOutput接口：</strong>它继承DataOutput接口并且支持对象的串行化，其内的writeObject()方法实现存储一个对象。<br><strong>ObjectInput接口：</strong>它继承DataInput接口并且支持对象的串行化，其内的readObject()方法实现读取一个对象。</p>
-<p>B：<strong>ObjectOutputStream类：</strong>它继承OutputStream类并且实现ObjectOutput接口。利用该类来实现将对象存储（调用ObjectOutput接口中的writeObject()方法）。<br><strong>ObjectInputStream类：</strong>它继承InputStream类并且实现ObjectInput接口。利用该类来实现读取一个对象（调用ObjectInput接口中的readObject()方法）</p>
-<p>对于父类的处理，如果父类没有实现串行化接口，则其必须有默认的构造函数（即没有参数的构造函数）。否则编译会报错。在反串行化的时候，默认构造函数会被调用。但是若把父类标记为可以串行化，则在反串行化的时候，其构造函数不会被调用。这时为什么呢？这是因为java对串行化的对象进行反串行化的时候，直接从流里获取其对象数据来生成一个对象实例,而不是通过其构造函数来完成的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">import java.io.*;</div><div class="line"></div><div class="line">public class Cat implements Serializable&#123;</div><div class="line">	private String name;</div><div class="line">	public Cat()&#123;</div><div class="line">		this.name = &quot;new cat&quot;;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public String getName()&#123;</div><div class="line">		retrun this.name;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public void setName(String name)&#123;</div><div class="line">		this.name = name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void main(String[] args)&#123;</div><div class="line">		Cat cat = new Cat();</div><div class="line">		try&#123;</div><div class="line">			FileOutputStream fos = new FileOutputStream(&quot;catDemo.out&quot;);</div><div class="line">			ObjectOutputStream oos = new ObjectOutputStream(fos);</div><div class="line">			System.out.println(&quot; 1&gt; &quot; + cat.getName());</div><div class="line">			cat.setName(&quot;My cat&quot;);</div><div class="line">			oos.writeObject(cat);</div><div class="line">			oos.close();</div><div class="line">		&#125;</div><div class="line">		catch (Exception e)&#123;</div><div class="line">			e.printStackTrace;	</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		try&#123;</div><div class="line">			FileInputStream fis = new FileInputStream(&quot;catDemo.out&quot;);</div><div class="line">			ObjectInputStream ois = new ObjectInputStream(fis);</div><div class="line">			cat = (Cat) ois.readObject;</div><div class="line">			System.out.println(&quot; 2&gt; &quot; + cat.getName());</div><div class="line">			ois.close();</div><div class="line">		&#125;catch (Exception e)&#123;</div><div class="line">			e.printStackTrace;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">				</div><div class="line">	&#125;</div><div class="line">&#125;//writeObject和readObject 本身就是线程安全的，传输过程中是不允许被并发访问的。所以对象能一个一个接连不断的传过来。</div></pre></td></tr></table></figure>
+        <h2 id="接口（interface）"><a href="#接口（interface）" class="headerlink" title="接口（interface）"></a>接口（interface）</h2><h3 id="接口的定义"><a href="#接口的定义" class="headerlink" title="接口的定义"></a>接口的定义</h3><p>接口从本质上来说是一种特殊的抽象类。</p>
+<p>关键字：interface</p>
+<p>在接口中，所有的方法为公开的，抽象的方法：public abstract。</p>
+<p>在接口中，所有的属性都是公开的、静态的常量：public static final。</p>
+<p>接口与接口之间可以多继承，用extends，多个之间用逗号隔开。</p>
+<p>接口中没有构造方法，不能用“new 接口名”来实例化一个接口，但可以声明一个接口。</p>
+<p>例如：定义一个用于计算的接口，在该接口中定义了一个常量PI和两个方法，具体代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public interface CalInterface&#123;</div><div class="line"></div><div class="line">	final float PI = 3.14159f;//定义用于表示圆周率的常量PI</div><div class="line">	float getArea(float r);//定义一个用于计算面积的方法getArea()</div><div class="line">	float getCircumference(float r);//定义一个用于计算周长的方法getCircumference()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="接口的实现"><a href="#接口的实现" class="headerlink" title="接口的实现"></a>接口的实现</h3><p>关键字：implements</p>
+<p>一个类是实现一个接口必须实现接口中的所有的方法，否则其为抽象类，并且在实现类中的方法要加上public(不能省略)。</p>
+<p>类中的默认修饰符：default</p>
+<p>接口中的默认修饰符：public</p>
+<p>一个类除了继承另一个类外（只能继承一个类），还可以实现多个接口（接口之间用逗号分隔）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">public class Cire implements CalInterface&#123;</div><div class="line">	public float getArea(float r )&#123;</div><div class="line">		float area = PI * r * r;//计算圆的面积并赋值给变量area</div><div class="line">		return area;//返回计算后的圆面积</div><div class="line">	&#125;</div><div class="line">	public float getCircumference(float r)&#123;</div><div class="line">		float circumference = 2 * PI * r;//计算圆周长并赋值给变量circumference</div><div class="line">		return circumference;//返回计算后的圆周长</div><div class="line">		</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void main(String[] args)&#123;</div><div class="line">		Cire c = new Cire();</div><div class="line">		float f = c.getArea(2.0f);</div><div class="line">		System.out.println(Float.toString(f));</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="接口的作用"><a href="#接口的作用" class="headerlink" title="接口的作用"></a>接口的作用</h3><p>间接实现多继承：用接口来实现多继承并不会增加类关系的复杂度。因为接口不是类，与类不在一个层次上，是在类的基础上进行再次抽象。</p>
+<p>接口可以抽象出次要类型，分出主、次关系类型，符合看世界的一般方法。</p>
+<p>接口隔离，与封装类有关。一个对象都有多个方面，可以只展示其中几个方面，其他的都隐藏。因此可以看为“更高层次的封装”，把一个大接口做成若干个小接口。</p>
+<p>通过接口制定标准（最重要的作用）</p>
+<p>接口：制定标准。</p>
+<p>接口的调用者：使用标准。</p>
+<p>接口的实现类：实现标准。</p>
+<p>解耦合作用：把使用标准和实现标准分开，使得标准的制定者和实现者接触耦合关系，具有极强的可移植性。</p>
+<p>例：SUN公司提供一套访问数据库的接口（标准），java程序员访问数据库时针对数据库接口编程。接口由各个数据库厂商负责实现。</p>
+<h3 id="接口编程的原则"><a href="#接口编程的原则" class="headerlink" title="接口编程的原则"></a>接口编程的原则</h3><p>尽量针对接口编程（能用接口就用接口）。</p>
+<p>接口隔离原则（用若干个小接口取代一个大接口）。</p>
+<p><strong>注意：</strong></p>
+<p>接口中没有构造器，也没有main方法。</p>
+<p>在类的继承中，只能做单重继承，而实现接口时，一次则可以实现多个接口，每个接口间使用逗号“，”分隔。这时就可能出现常量或方法名冲突，则需要明确指定常量的接口，这可以通过“接口名.常量名”实现。如果出现方法冲突时，则只要实现一个方法就可以了。</p>
+
       
     </div>
 
@@ -375,8 +405,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/22/002局部变量，实例变量，静态变量与包管理/" rel="next" title="局部变量，实例变量，静态变量与包管理">
-                <i class="fa fa-chevron-left"></i> 局部变量，实例变量，静态变量与包管理
+              <a href="/2016/12/03/009abstract修饰符/" rel="next" title="abstract修饰符">
+                <i class="fa fa-chevron-left"></i> abstract修饰符
               </a>
             
           </div>
@@ -385,8 +415,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/27/006static关键词/" rel="prev" title="static修饰符">
-                static修饰符 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/12/06/011java包装类及其拆箱装箱/" rel="prev" title="java包装类">
+                java包装类 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -507,7 +537,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java序列化"><span class="nav-number">1.</span> <span class="nav-text">Java序列化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#串行化的特点："><span class="nav-number">1.2.</span> <span class="nav-text">串行化的特点：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#接口（interface）"><span class="nav-number">1.</span> <span class="nav-text">接口（interface）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#接口的定义"><span class="nav-number">1.1.</span> <span class="nav-text">接口的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口的实现"><span class="nav-number">1.2.</span> <span class="nav-text">接口的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口的作用"><span class="nav-number">1.3.</span> <span class="nav-text">接口的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口编程的原则"><span class="nav-number">1.4.</span> <span class="nav-text">接口编程的原则</span></a></li></ol></li></ol></div>
             
 
           </div>
