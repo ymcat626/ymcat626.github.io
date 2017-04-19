@@ -326,25 +326,18 @@
 
       
         
-          
-            <h2 id="String-StringBuffer-StringBuilder"><a href="#String-StringBuffer-StringBuilder" class="headerlink" title="String,StringBuffer,StringBuilder"></a>String,StringBuffer,StringBuilder</h2><h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p>String:不可改变的Unicode字符序列。</p>
+          <h2 id="String-StringBuffer-StringBuilder"><a href="#String-StringBuffer-StringBuilder" class="headerlink" title="String,StringBuffer,StringBuilder"></a>String,StringBuffer,StringBuilder</h2><h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p>String:不可改变的Unicode字符序列。</p>
 <p>池化思想，把需要共享的数据放在池中，用一个存储区域来存放一些公用资源以减少存储空间的开销。</p>
 <p>在Stirng类中，以字面值创建时，会到Java方法空间的串池中去查找，如果没有则会在串池里创建一个字符串对象，并返回其地址赋给对象变量，如果有就返回串池中字符串的地址，并把这个地址赋给对象变量。</p>
 <p>如果new，则会在堆空间中创建String类的对象，不会有上述的过程。</p>
 <p>如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">String s1 = &quot;abc&quot;;//新创建，字符串常量池中没有该串，则会在池中创建一个串“abc”</div><div class="line">String s2 = &quot;abc&quot;;//串池中已经存在“abc”，则s2会去指向“abc”而不会去创建一个新的串。</div><div class="line">String s3 = new String(&quot;abc&quot;);//直接在堆中去开辟一个新的空间，而不会去池中查找。</div></pre></td></tr></table></figure></p>
-<p>类中的具体方法查看下api文档。</p>
-<p>调用任何String中的方法，不会改变String自身，除非重新赋值。</p>
-<h3 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer"></a>StringBuffer</h3><p>StringBuffer:可改变的Unicode字符序列。</p>
-<p>允许并发操作，是线程安全的。</p>
-<p>String类在进行字符串连接时会显得效率很低，就是因为它所产生的对象的属性是不能够修改的，当连接字符串时也就只能创建新的对象。</p>
-<p>对于很多字符串连接时，应当使用StringBuffer类，使用这个类的对象来进行字符串连接时就不会有多余的中间对象生成，从而优化了效率。</p>
-<p>例：对于字符串连接String str = “A” + “B” + “C” + “D”;</p>
-<p>产生：“AB”、“ABC”明显是多余对象，浪费空间。</p>
-<p>解决方案：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">String s = null;</div><div class="line">StringBuffer sb = new StringBuffer(&quot;A&quot;);</div><div class="line">sb.append(&quot;B&quot;);</div><div class="line">sb.append(&quot;C&quot;);</div><div class="line">sb.append(&quot;D&quot;);</div><div class="line">s = sb.toString();</div></pre></td></tr></table></figure></p>
-<h3 id="StringBuilder"><a href="#StringBuilder" class="headerlink" title="StringBuilder"></a>StringBuilder</h3><p>StringBuilder：可改变的Unicode字符序列</p>
-<p>操作同StringBuffer，只是不支持并发操作，非线程安全的。</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/12/15/014String,StringBuffer,StringBuilder/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -850,36 +843,20 @@
 
       
         
-          
-            <h2 id="接口（interface）"><a href="#接口（interface）" class="headerlink" title="接口（interface）"></a>接口（interface）</h2><h3 id="接口的定义"><a href="#接口的定义" class="headerlink" title="接口的定义"></a>接口的定义</h3><p>接口从本质上来说是一种特殊的抽象类。</p>
+          <h2 id="接口（interface）"><a href="#接口（interface）" class="headerlink" title="接口（interface）"></a>接口（interface）</h2><h3 id="接口的定义"><a href="#接口的定义" class="headerlink" title="接口的定义"></a>接口的定义</h3><p>接口从本质上来说是一种特殊的抽象类。</p>
 <p>关键字：interface</p>
 <p>在接口中，所有的方法为公开的，抽象的方法：public abstract。</p>
 <p>在接口中，所有的属性都是公开的、静态的常量：public static final。</p>
 <p>接口与接口之间可以多继承，用extends，多个之间用逗号隔开。</p>
 <p>接口中没有构造方法，不能用“new 接口名”来实例化一个接口，但可以声明一个接口。</p>
 <p>例如：定义一个用于计算的接口，在该接口中定义了一个常量PI和两个方法，具体代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public interface CalInterface&#123;</div><div class="line"></div><div class="line">	final float PI = 3.14159f;//定义用于表示圆周率的常量PI</div><div class="line">	float getArea(float r);//定义一个用于计算面积的方法getArea()</div><div class="line">	float getCircumference(float r);//定义一个用于计算周长的方法getCircumference()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="接口的实现"><a href="#接口的实现" class="headerlink" title="接口的实现"></a>接口的实现</h3><p>关键字：implements</p>
-<p>一个类是实现一个接口必须实现接口中的所有的方法，否则其为抽象类，并且在实现类中的方法要加上public(不能省略)。</p>
-<p>类中的默认修饰符：default</p>
-<p>接口中的默认修饰符：public</p>
-<p>一个类除了继承另一个类外（只能继承一个类），还可以实现多个接口（接口之间用逗号分隔）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">public class Cire implements CalInterface&#123;</div><div class="line">	public float getArea(float r )&#123;</div><div class="line">		float area = PI * r * r;//计算圆的面积并赋值给变量area</div><div class="line">		return area;//返回计算后的圆面积</div><div class="line">	&#125;</div><div class="line">	public float getCircumference(float r)&#123;</div><div class="line">		float circumference = 2 * PI * r;//计算圆周长并赋值给变量circumference</div><div class="line">		return circumference;//返回计算后的圆周长</div><div class="line">		</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void main(String[] args)&#123;</div><div class="line">		Cire c = new Cire();</div><div class="line">		float f = c.getArea(2.0f);</div><div class="line">		System.out.println(Float.toString(f));</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="接口的作用"><a href="#接口的作用" class="headerlink" title="接口的作用"></a>接口的作用</h3><p>间接实现多继承：用接口来实现多继承并不会增加类关系的复杂度。因为接口不是类，与类不在一个层次上，是在类的基础上进行再次抽象。</p>
-<p>接口可以抽象出次要类型，分出主、次关系类型，符合看世界的一般方法。</p>
-<p>接口隔离，与封装类有关。一个对象都有多个方面，可以只展示其中几个方面，其他的都隐藏。因此可以看为“更高层次的封装”，把一个大接口做成若干个小接口。</p>
-<p>通过接口制定标准（最重要的作用）</p>
-<p>接口：制定标准。</p>
-<p>接口的调用者：使用标准。</p>
-<p>接口的实现类：实现标准。</p>
-<p>解耦合作用：把使用标准和实现标准分开，使得标准的制定者和实现者接触耦合关系，具有极强的可移植性。</p>
-<p>例：SUN公司提供一套访问数据库的接口（标准），java程序员访问数据库时针对数据库接口编程。接口由各个数据库厂商负责实现。</p>
-<h3 id="接口编程的原则"><a href="#接口编程的原则" class="headerlink" title="接口编程的原则"></a>接口编程的原则</h3><p>尽量针对接口编程（能用接口就用接口）。</p>
-<p>接口隔离原则（用若干个小接口取代一个大接口）。</p>
-<p><strong>注意：</strong></p>
-<p>接口中没有构造器，也没有main方法。</p>
-<p>在类的继承中，只能做单重继承，而实现接口时，一次则可以实现多个接口，每个接口间使用逗号“，”分隔。这时就可能出现常量或方法名冲突，则需要明确指定常量的接口，这可以通过“接口名.常量名”实现。如果出现方法冲突时，则只要实现一个方法就可以了。</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/12/04/010接口(interface)/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

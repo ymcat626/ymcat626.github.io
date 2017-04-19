@@ -97,7 +97,7 @@
 <meta property="og:description" content="String,StringBuffer,StringBuilderStringString:不可改变的Unicode字符序列。
 池化思想，把需要共享的数据放在池中，用一个存储区域来存放一些公用资源以减少存储空间的开销。
 在Stirng类中，以字面值创建时，会到Java方法空间的串池中去查找，如果没有则会在串池里创建一个字符串对象，并返回其地址赋给对象变量，如果有就返回串池中字符串的地址，并把这个地">
-<meta property="og:updated_time" content="2017-04-18T15:21:38.131Z">
+<meta property="og:updated_time" content="2017-04-18T15:43:53.791Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="String,StringBuffer,StringBuilder">
 <meta name="twitter:description" content="String,StringBuffer,StringBuilderStringString:不可改变的Unicode字符序列。
@@ -332,6 +332,7 @@
 <p>在Stirng类中，以字面值创建时，会到Java方法空间的串池中去查找，如果没有则会在串池里创建一个字符串对象，并返回其地址赋给对象变量，如果有就返回串池中字符串的地址，并把这个地址赋给对象变量。</p>
 <p>如果new，则会在堆空间中创建String类的对象，不会有上述的过程。</p>
 <p>如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">String s1 = &quot;abc&quot;;//新创建，字符串常量池中没有该串，则会在池中创建一个串“abc”</div><div class="line">String s2 = &quot;abc&quot;;//串池中已经存在“abc”，则s2会去指向“abc”而不会去创建一个新的串。</div><div class="line">String s3 = new String(&quot;abc&quot;);//直接在堆中去开辟一个新的空间，而不会去池中查找。</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>类中的具体方法查看下api文档。</p>
 <p>调用任何String中的方法，不会改变String自身，除非重新赋值。</p>
 <h3 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer"></a>StringBuffer</h3><p>StringBuffer:可改变的Unicode字符序列。</p>
