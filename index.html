@@ -250,7 +250,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/29/python/2018-05-01-装饰器与可变参数/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/20/python/2018-05-20-HTTP0.9,HTTP1.0和HTTP1.1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小狮子">
@@ -272,8 +272,8 @@
             
               
                 
-                <a class="post-title-link" href="/2018/04/29/python/2018-05-01-装饰器与可变参数/" itemprop="url">
-                  从输入 URL 到页面加载完成的过程中都发生了什么事情？
+                <a class="post-title-link" href="/2018/05/20/python/2018-05-20-HTTP0.9,HTTP1.0和HTTP1.1/" itemprop="url">
+                  HTTP0.9，HTTP1.0和HTTP1.1
                 </a>
               
             
@@ -289,8 +289,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-29T16:57:36+08:00">
-                2018-04-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-20T09:07:36+08:00">
+                2018-05-20
               </time>
             
 
@@ -327,7 +327,11 @@
       
         
           
-            <h3 id="flask项目结构"><a href="#flask项目结构" class="headerlink" title="flask项目结构"></a>flask项目结构</h3><p>list是一种<strong>有序</strong>的集合，可以随时进行删除和添加元素。类似于其他语言里的数组，但是list同时可以存储不同类型的数据。<br>不要用数字来作为字典的 key</p>
+            <p>一，HTTP协议最初开始的设计目标就是通过网络来支持Client和Server之间的事务处理。为了适应WWW的需求，在功能和性能方面进行了 大量的改进，最开始出现的HTTP原始协议现在称为HTTP0.9，它是一个面向消息的简单协议，是现在使用的HTTP协议的子集。因此它同HTTP1.0,HTTP1.1兼容。该协议描述了Client和Server之间请求和响应的过程:Client在本地主机向运行于远程主机上的 Server请求链接，连接成功之后通过GET来访问Server端对象(可以是普通网页，也可以是通过CGI或ISAPI生成的动态页 面)，Server端在连接终止之前将请求的对象或者是错误消息返回给Client，结束响应过程HTTP0.9和现在使用的HTTP1.1在基本上实现 上没有大的区别。</p>
+<p>二，HTTP1.0是以HTTP0.9为基础发展起来的，增加了复杂网络连接下访问不同对象类型的功能，基本的改进如下:</p>
+<p>请求的类型，如 HEAD、POST等。请求和响应消息的协议版本，响应消息第一行以“HTTP/1.0”开始，表示Server使用的是HTTP协议的1.0版。使用 Server响应码来表示请求响应消息的成功与否，如果响应消息第一行以“200　OK”结束，说明操作成功。使用MIME的消息标题(Header)和消息体(Body)格式来描述访问对象的数据类型和附加在后面的元信息，如MIME的Header为“Content-type:text/html”表明响应的消息实体是HTML文件，增加了MIME支持之后，使HTTP协议扩大了处理的数据类型，支持对多媒体流信息的处理。用Challenge/Response实现认证，这样可以在用户访问某些页面时要求输入用户名和密码，进行身份认证。增加了代理(proxy)支持功能，在HTTP0.9中，规定了Client和Server只能直接交互，而1.0版可以通过代理等中间实体实现间接连接。</p>
+<p>三，HTTP1.1是在HTTP1.0的基础上实现的一次飞跃，主要的改进集中在性能、安全、数据类型处理等方面:</p>
+<p>提出Server端缓冲 对象的概念，是减少网络上相同类型内容的反复传送，提高访问速度。基本的连接是永久连接，提高了性能。允许Client和Server之间对内容进行协商突破了HTTP1.0中Server和IP一一对应的限制，可能通过主机名来决定由哪一个Server提供服务。</p>
 
           
         
@@ -457,6 +461,127 @@
             </a>
           </div>
           <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/29/python/2018-05-01-装饰器与可变参数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小狮子">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="醉墨">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/04/29/python/2018-05-01-装饰器与可变参数/" itemprop="url">
+                  从输入 URL 到页面加载完成的过程中都发生了什么事情？
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-29T16:57:36+08:00">
+                2018-04-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="flask项目结构"><a href="#flask项目结构" class="headerlink" title="flask项目结构"></a>flask项目结构</h3><p>list是一种<strong>有序</strong>的集合，可以随时进行删除和添加元素。类似于其他语言里的数组，但是list同时可以存储不同类型的数据。<br>不要用数字来作为字典的 key</p>
+
+          
         
       
     </div>
@@ -743,135 +868,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/20/python/2018-04-20-dict()/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="小狮子">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="醉墨">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/04/20/python/2018-04-20-dict()/" itemprop="url">
-                  python中的字典
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-20T10:15:36+08:00">
-                2018-04-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="dict-的用法"><a href="#dict-的用法" class="headerlink" title="dict()的用法"></a>dict()的用法</h3><h3 id="字典的用法"><a href="#字典的用法" class="headerlink" title="字典的用法"></a>字典的用法</h3><p>一般来说，python中的字典可以这样写</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">a = &#123;</div><div class="line">    <span class="string">'one'</span>: <span class="number">1</span>,</div><div class="line">    <span class="string">'two'</span>: <span class="number">2</span>,</div><div class="line">    <span class="string">'three'</span>: <span class="number">3</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>另一种写法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">a = dict(</div><div class="line">	one = <span class="number">1</span>,</div><div class="line">    two = <span class="number">2</span>,</div><div class="line">    three = <span class="number">3</span>,</div><div class="line">)</div></pre></td></tr></table></figure>
-<p>个人认为使用dict()更加方便。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/20/python/2018-04-20-dict()/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -921,7 +917,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
